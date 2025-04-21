@@ -45,6 +45,9 @@ img {
     align-items: center;
 }
 
+.socials-icon {
+    fill: #f4f4fd;
+}
 /* header */
 
 a.logo-top {
@@ -107,6 +110,21 @@ a.logo-top {
 .nav-link:active {
     color: #404bbf;
     text-decoration: underline;
+}
+
+.nav-link.current{
+    position: relative;
+        color: #404bbf;
+}
+.nav-link.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
 }
 
 .address {
@@ -232,6 +250,18 @@ li.advantages-list-item {
     width: calc((100%-72px) / 4);
 }
 
+.advantages-container {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
 
 /* team */
 
@@ -285,6 +315,33 @@ li.advantages-list-item {
 .info-team {
     text-align: center;
     margin-bottom: 8px;
+}
+
+.member-socials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.social-link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #4d5ae5;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link-icon:hover,
+.social-link-icon:focus {
+    background-color: #404bbf;
+}
+
+.list-member-social {
+    width: 40px;
+    height: 40px;
 }
 
 /* portfolio */
